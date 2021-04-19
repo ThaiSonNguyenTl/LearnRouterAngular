@@ -1,0 +1,22 @@
+<ng-container *ngIf = "product; else noProduct" >
+  <div class="card">
+    <div class="card-header bg-warning">
+      Product Detail
+    </div>
+    <div class="card-body">
+      <h3>ID: {{product.id}}</h3>
+      <h3>Name: {{product.name}}</h3>
+      <h3 class="text-danger">Price: ${{product.price}}</h3>
+      <h3>{{product.status?'in stock': 'out of stock'}}</h3>
+    </div>
+  </div>
+</ng-container>
+<ng-template #noProduct>
+  <h1 class="text-warning">Product has beem deleted !</h1>
+</ng-template> <hr/>
+<button type="button" class="btn btn-danger" (click) = "onEdit()">Edit</button> &nbsp;
+<button type="button" class="btn btn-primary" (click) = "onDelete()">Delete</button>
+<hr/>
+<button type="button" class="btn btn-warning" (click) = "onBackToList()">Back to List</button>
+
+

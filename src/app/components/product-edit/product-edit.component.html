@@ -1,0 +1,21 @@
+
+<form>
+  <h2 class="text-danger">Edit Product</h2>
+
+  <div class="form-group">
+    <label for="">Name</label>
+    <input type="text" class="form-control" [(ngModel)] ="product.name" [ngModelOptions] ="{standalone:true}">
+  </div>
+
+  <div class="form-group">
+    <label for="">Price</label>
+    <input type="number" class="form-control" [(ngModel)] ="product.price" [ngModelOptions] ="{standalone:true}">
+  </div>
+  <label for="">Status</label>
+  <select class="form-control" [(ngModel)] ="product.status" [ngModelOptions] ="{standalone:true}">
+    <option value="true">In stock</option>
+    <option value="false">Out of stock</option>
+  </select> <br/> <hr/>
+  <button type="submit" class="btn btn-primary" (click) = "handleSubmit()">Save</button>
+</form>
+

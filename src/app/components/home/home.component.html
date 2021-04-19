@@ -1,0 +1,10 @@
+<div class="alert alert-danger" role="alert" *ngIf = "errorAccess == -1">
+  <strong>Key allow access is wrong !</strong>
+</div>
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <h1>home works!</h1>
+<u class="text-bold ">Enter Key Access !</u>
+<input type="text" class="form-control" placeholder="enter key ..." #keyAccess> <hr/>
+<button type="button" class="btn btn-primary" (click) ="onAccess(keyAccess.value)">Access</button>
+
+</div>
